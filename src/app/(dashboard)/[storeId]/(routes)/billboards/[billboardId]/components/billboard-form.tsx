@@ -101,7 +101,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => 
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Background ismage</FormLabel>
+                <FormLabel>Background image</FormLabel>
                 <FormControl>
                   <ImageUpload
                     onChange={(url) => field.onChange(url)}

@@ -25,8 +25,8 @@ export const MainNav: React.FC<MainNavProps> = ({ className, ...props }) => {
     },
     {
       href: `/${params.storeId}/categories`,
-      label: 'Billboards',
-      active: pathname === `/${params.storeId}/billboards`,
+      label: 'Categories',
+      active: pathname === `/${params.storeId}/categories`,
     },
     {
       href: `/${params.storeId}/settings`,
