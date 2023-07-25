@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import prismadb from '@/lib/prismadb';
 import { BillboardClient } from './components/client';
-import { BillboardColumn } from '@/app/(dashboard)/[storeId]/(routes)/billboards/components/columns';
+import { BillboardColumn } from './components/columns';
 
 type BillboardsPageProps = {
   params: { storeId: string };
