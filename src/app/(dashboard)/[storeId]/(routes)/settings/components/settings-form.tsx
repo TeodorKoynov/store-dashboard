@@ -23,7 +23,7 @@ export type SettingsFormProps = {
 };
 
 const formSchema = z.object({
-  name: z.string().min(1),
+  name: z.string().min(1).trim(),
 });
 
 type SettingsFormValues = z.infer<typeof formSchema>;

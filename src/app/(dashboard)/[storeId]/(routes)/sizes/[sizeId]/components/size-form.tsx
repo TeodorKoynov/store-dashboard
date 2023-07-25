@@ -17,8 +17,8 @@ import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 
 const formSchema = z.object({
-  name: z.string().min(1),
-  value: z.string().min(1),
+  name: z.string().min(1).trim(),
+  value: z.string().min(1).trim(),
 });
 
 type SizeFormValues = z.infer<typeof formSchema>;

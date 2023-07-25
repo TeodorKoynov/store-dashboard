@@ -18,7 +18,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Separator } from '@/components/ui/separator';
 
 const formSchema = z.object({
-  name: z.string().min(1),
+  name: z.string().min(1).trim(),
   billboardId: z.string().min(1),
 });
 

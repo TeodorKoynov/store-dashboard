@@ -17,10 +17,14 @@ import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 
 const formSchema = z.object({
-  name: z.string().min(1),
-  value: z.string().min(4).regex(/^#/, {
-    message: 'String must be a valid hex code',
-  }),
+  name: z.string().min(1).trim(),
+  value: z
+    .string()
+    .min(4)
+    .regex(/^#/, {
+      message: 'String must be a valid hex code',
+    })
+    .trim(),
 });
 
 type ColorFormValues = z.infer<typeof formSchema>;
