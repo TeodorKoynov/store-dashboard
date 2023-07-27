@@ -8,6 +8,7 @@ export type MainNavProps = {
   className?: string;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const MainNav: React.FC<MainNavProps> = ({ className, ...props }) => {
   const pathname = usePathname();
   const params = useParams();

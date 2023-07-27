@@ -11,9 +11,12 @@ export async function POST(req: Request) {
   let event: Stripe.Event;
 
   try {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     event = stripe.webhooks.constructEvent(body, signature, process.env.STRIPE_WEBHOOK_SECRET!);
-  } catch (error: any) {
-    return new NextResponse(`Webhook Error: ${error.message}`, { status: 400 });
+  } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    return new NextResponse(`Webhook Error: ${error?.message}`, { status: 400 });
   }
 
   const session = event.data.object as Stripe.Checkout.Session;

@@ -13,6 +13,8 @@ export type ImageUploadProps = {
   value: string[];
 };
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const ImageUpload: React.FC<ImageUploadProps> = ({ disabled, onChange, onRemove, value }) => {
   const [isMounted, setIsMounted] = useState(false);
 
